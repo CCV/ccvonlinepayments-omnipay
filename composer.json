@@ -5,9 +5,9 @@
   "keywords": ["plugin", "payments", "omnipay", "ccv"],
   "homepage": "https://github.com/CCV/ccvonlinepayments-omnipay",
   "license": "MIT",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "require": {
-    "php": "^7.2.0",
+    "php": "^7.1.0|^8.0",
     "omnipay/common": "^3.0.1",
     "brick/phonenumber": "^0.2.2"
   },
