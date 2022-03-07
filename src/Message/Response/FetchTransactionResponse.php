@@ -2,10 +2,11 @@
 
 namespace CCVOnlinePayments\Omnipay\Message\Response;
 
+use Omnipay\Common\Message\RedirectResponseInterface;
 use Omnipay\Common\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
-class FetchTransactionResponse extends CCVOnlinePaymentsResponse
+class FetchTransactionResponse extends CCVOnlinePaymentsResponse implements RedirectResponseInterface
 {
     public function __construct(RequestInterface $request, ResponseInterface $response)
     {
