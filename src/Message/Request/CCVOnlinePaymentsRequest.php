@@ -47,6 +47,11 @@ abstract class CCVOnlinePaymentsRequest extends AbstractRequest
             'Authorization' => sprintf('Basic %s', \base64_encode(trim($this->getApiKey()).":")),
         ];
 
+        if($method === self::GET && sizeof($data) > 0) {
+            $endpoint .= "?".http_build_query($data);
+            $data = [];
+        }
+
         try {
             $response = $this->httpClient->request(
                 $method,

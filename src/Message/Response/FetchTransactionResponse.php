@@ -11,10 +11,6 @@ class FetchTransactionResponse extends CCVOnlinePaymentsResponse implements Redi
     public function __construct(RequestInterface $request, ResponseInterface $response)
     {
         parent::__construct($request, $response);
-
-        if(isset($this->data[0])) {
-            $this->data = $this->data[0];
-        }
     }
 
     public function isRedirect()
