@@ -163,7 +163,7 @@ class PurchaseRequest extends CCVOnlinePaymentsRequest
             "issuer"                    => $this->getIssuer(),
             "brand"                     => $this->getBrand(),
             "metadata"                  => $this->getMetadataString(),  // FIXME
-            "scaReady"                  => true,
+            "scaReady"                  => false,
             "billingAddress"            => $this->getCard()->getBillingAddress1(),
             "billingCity"               => $this->getCard()->getBillingCity(),
             "billingState"              => $this->getCard()->getBillingState(),
