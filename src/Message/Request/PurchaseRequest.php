@@ -205,6 +205,10 @@ class PurchaseRequest extends CCVOnlinePaymentsRequest
     }
 
     private function getPhoneNumber($phoneNumber, $countryCode) {
+        if($phoneNumber === null) {
+            return null;
+        }
+
         try {
             $number = PhoneNumber::parse($phoneNumber, $countryCode);
             return $number->getNationalNumber();
@@ -214,6 +218,10 @@ class PurchaseRequest extends CCVOnlinePaymentsRequest
     }
 
     private function getPhoneCountryNumber($phoneNumber, $countryCode) {
+        if($phoneNumber === null) {
+            return null;
+        }
+
         try {
             $number = PhoneNumber::parse($phoneNumber, $countryCode);
             return $number->getCountryCode();
