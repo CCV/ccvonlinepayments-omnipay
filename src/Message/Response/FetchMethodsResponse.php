@@ -16,6 +16,7 @@ class FetchMethodsResponse extends CCVOnlinePaymentsResponse
             "eps"               => "Eps",
             "giropay"           => "Giropay",
             "ideal"             => "iDeal",
+            "applepay"          => "Apple Pay",
             "payconiq"          => "Payconiq",
             "paypal"            => "Paypal",
             "sofort"            => "Sofort",
