@@ -46,7 +46,7 @@ class FetchMethodsResponse extends CCVOnlinePaymentsResponse
                     "apiBrand"  => null,
                 ];
 
-                foreach($apiPaymentMethod['options'] as $option) {
+                foreach($apiPaymentMethod['options']??[] as $option) {
                     $method['issuers'][] = [
                         "id"        => $option['issuerid'],
                         "name"      => $option['issuerdescription']

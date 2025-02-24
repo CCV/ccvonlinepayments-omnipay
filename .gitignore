@@ -3,3 +3,4 @@ test
 build
 src/images
 .idea
+composer.lock
