@@ -134,7 +134,7 @@ class PurchaseRequest extends CCVOnlinePaymentsRequest
         if(is_array($metadata)) {
             $metadata["PHP"] = phpversion();
             $metadata["OS"]  = php_uname();
-            $metadata["ccvOmnipay"]  = "1.1.1";
+            $metadata["ccvOmnipay"]  = "1.1.2";
 
             $parts = [];
             foreach ($metadata as $key => $value) {
@@ -164,7 +164,6 @@ class PurchaseRequest extends CCVOnlinePaymentsRequest
             "issuer"                    => $this->getIssuer(),
             "brand"                     => $this->getBrand(),
             "metadata"                  => $this->getMetadataString(),  // FIXME
-            "scaReady"                  => false,
             "billingAddress"            => $this->getCard()->getBillingAddress1(),
             "billingCity"               => $this->getCard()->getBillingCity(),
             "billingState"              => $this->getCard()->getBillingState(),
